@@ -18,7 +18,7 @@ body {
 
 body::-webkit-scrollbar {
     width: 0;
-  }
+}
 
 .wrapper {
     max-width: 60rem;
@@ -47,7 +47,21 @@ body::-webkit-scrollbar {
     height: 0;
 }
 
-.accordion-item__input:checked~.accordion-item__trigger {}
+.accordion-item__input~.accordion-item__trigger svg {
+    opacity: 0;
+}
+
+.accordion:hover svg {
+    opacity: 1;
+}
+
+.accordion-item__input:checked~.accordion-item__trigger svg {
+    transform: rotate(-45deg);
+}
+
+.accordion-item__input:hover~.accordion-item__trigger svg {
+    transform: rotate(-45deg);
+}
 
 .accordion-item__input:checked~.accordion-item__content {
     height: 300px;
