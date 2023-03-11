@@ -41,24 +41,31 @@ body::-webkit-scrollbar {
     padding: 20px 0;
     border-top: 1px solid black;
     color: rgb(11, 54, 146);
+    transition: filter .7s ease-in-out;
 }
 
 .accordion-item__content {
     display: flex;
     justify-content: center;
     height: 0;
+    transition: height .7s ease-in-out, filter .7s ease-in-out;
 }
 
 .accordion-item__input~.accordion-item__trigger svg {
     opacity: 0;
+    transition: .7s ease-in-out;
 }
 
 .accordion:hover svg {
     opacity: 1;
 }
 
+.accordion .accordion-item__trigger {
+    transition: color .7s ease-in-out;
+}
+
 .accordion:hover .accordion-item__trigger {
-  color: black;
+    color: black;
 }
 
 .accordion-item__input:checked~.accordion-item__trigger svg {
@@ -75,17 +82,17 @@ body::-webkit-scrollbar {
 }
 
 .accordion-item__input:checked~.accordion-item__trigger {
-color: black;
-filter: grayscale(40%);
+    color: black;
+    filter: grayscale(70%);
 }
 
 .accordion-item__input:active~.accordion-item__trigger {
     color: rgb(11, 54, 146);
-    }
+}
 
-    .accordion-item__input:active~.accordion-item__content {
-        filter: grayscale(40%);
-        }
+.accordion-item__input:active~.accordion-item__content {
+    filter: grayscale(70%);
+}
 
 .accordion-item__trigger:hover~.accordion-item__content {
     height: 300px;
@@ -96,6 +103,3 @@ filter: grayscale(40%);
     height: 300px;
     margin-bottom: 20px;
 }
-
-
-
