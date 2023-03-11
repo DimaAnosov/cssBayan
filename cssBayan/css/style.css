@@ -16,6 +16,10 @@ body {
     background-color: rgb(198, 204, 179);
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+  }
+
 .wrapper {
     max-width: 60rem;
     padding: 20px 10px;
